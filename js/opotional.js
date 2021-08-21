@@ -1,7 +1,5 @@
-// Memory Function
-
-
 const bestPrice = 1299;
+// Memory Function
 function memoryCost(price) {
     const withoutMemoryCost = 0;
     const memoryCost = document.getElementById('memory-cost');
@@ -47,7 +45,7 @@ function deliveryCost(price) {
     }
     return deliveryCostNumber;
 }
-
+// Total price Function
 function totalCost() {
     const totalPrice = document.getElementById('total-price');
     const totalPriceText = totalPrice.innerText;
@@ -56,7 +54,7 @@ function totalCost() {
     return totalPriceNumber;
     
 }
-
+// Footer Total Function
 function footerTotal() {
     const footerTotal = document.getElementById('footer-total');
     const footerTotalText = footerTotal.innerText;
@@ -75,6 +73,7 @@ document.getElementById('16gb-button').addEventListener('click',function () {
     totalCost();
     footerTotal();
 });
+
 // storage cost
 document.getElementById('256gb-ssd-button').addEventListener('click',function () {
     storageCost(0);
@@ -91,6 +90,7 @@ document.getElementById('1tb-ssd-button').addEventListener('click',function () {
     totalCost();
     footerTotal();
 });
+
 // delivery cost
 document.getElementById('delivery-button').addEventListener('click',function () {
     deliveryCost(0);
