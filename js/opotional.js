@@ -51,14 +51,19 @@ function totalCost() {
     const totalPriceText = totalPrice.innerText;
     const totalPriceNumber = parseFloat(totalPriceText);
     totalPrice.innerText = bestPrice + parseFloat(memoryCost()) + parseFloat(storageCost()) + parseFloat(deliveryCost()); 
-    return totalPriceNumber;
-    
+    return totalPriceNumber;    
 }
 // Footer Total Function
 function footerTotal() {
     const footerTotal = document.getElementById('footer-total');
     const footerTotalText = footerTotal.innerText;
     footerTotal.innerText = totalCost();
+    return footerTotalText;
+}
+
+// pomo code Function
+function pomo(name) {
+
 }
 
 
@@ -102,3 +107,15 @@ document.getElementById('running-delivery-button').addEventListener('click',func
     totalCost();
     footerTotal();
 });
+document.getElementById('pomo-button').addEventListener('click',function () {
+    const pomoInput = document.getElementById('pomo-input');
+    const pomoInputInput = pomoInput.value;
+    if (pomoInput.value = 'stevekaku') {
+        const footerTotal = document.getElementById('footer-total');
+        const footerTotalText = footerTotal.innerText;
+        const totalValue = totalCost() % 20;
+        footerTotal.innerText = totalCost() - totalValue;
+        pomoInput.value = ' ';
+    }
+    
+})
